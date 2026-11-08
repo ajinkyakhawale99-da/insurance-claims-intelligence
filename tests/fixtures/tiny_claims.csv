@@ -1,0 +1,6 @@
+FraudFound_P,PolicyNumber,Age,Sex,MaritalStatus,Month,MonthClaimed,NumberOfSuppliments
+Y,10001,35,Male,Married,Jan,Feb,1 to 2
+N,10002,44,Female,Single,Mar,Mar,none
+N,10003,29,Male,Married,May,Jun,1 to 2
+Y,10004,51,Female,Single,Oct,Jan,more than 2
+

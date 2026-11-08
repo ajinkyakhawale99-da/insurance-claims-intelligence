@@ -1,0 +1,21 @@
+# Local data: download the public source yourself; never commit it.
+data/raw/*
+!data/raw/.gitkeep
+data/processed/*
+!data/processed/.gitkeep
+data/warehouse/*
+!data/warehouse/.gitkeep
+models/*
+!models/.gitkeep
+reports/generated/*
+!reports/generated/.gitkeep
+reports/figures/*
+!reports/figures/.gitkeep
+__pycache__/
+.pytest_cache/
+.venv/
+.streamlit/secrets.toml
+*.py[cod]
+Thumbs.db
+
+*.egg-info/

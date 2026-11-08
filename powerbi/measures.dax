@@ -1,0 +1,41 @@
+-- These measures are descriptive of the dataset's recorded target label.
+Claim Records = COUNTROWS ( FactClaim )
+
+Recorded Positive Labels =
+CALCULATE (
+    [Claim Records],
+    FactClaim[recorded_positive_label] = 1
+)
+
+Recorded Positive Label Rate =
+DIVIDE ( [Recorded Positive Labels], [Claim Records] )
+
+Scored Holdout Claims = COUNTROWS ( ModelScores )
+
+Holdout Recorded Positives =
+CALCULATE ( [Scored Holdout Claims], ModelScores[actual_label] = 1 )
+
+Holdout Review Queue =
+CALCULATE (
+    [Scored Holdout Claims],
+    ModelScores[flagged_for_manual_review] = TRUE ()
+)
+
+Holdout Review Queue Rate =
+DIVIDE ( [Holdout Review Queue], [Scored Holdout Claims] )
+
+Holdout True Positives =
+CALCULATE (
+    [Scored Holdout Claims],
+    ModelScores[actual_label] = 1,
+    ModelScores[flagged_for_manual_review] = TRUE ()
+)
+
+Holdout Precision =
+DIVIDE ( [Holdout True Positives], [Holdout Review Queue] )
+
+Holdout Recall =
+DIVIDE ( [Holdout True Positives], [Holdout Recorded Positives] )
+
+-- Do not interpret this rate as a current insurer's prevalence or confirmed fraud rate.
+
