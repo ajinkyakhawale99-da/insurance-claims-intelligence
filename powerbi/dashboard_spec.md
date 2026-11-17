@@ -9,7 +9,7 @@ In Power BI Desktop, import the CSV files from `data/processed/powerbi/` after r
 - `DimPolicy.csv`
 - `DimVehicle.csv`
 - `DimClaimant.csv`
-- `ModelScores.csv`, `ModelMetrics.csv`, `PrecisionRecallCurve.csv`, `CalibrationCurve.csv` ,  `FairnessAudit.csv` after model training
+- `ModelScores.csv`, `ModelMetrics.csv`, `PrecisionRecallCurve.csv`, `CalibrationCurve.csv`, and `FairnessAudit.csv` after model training
 
 Create one-to-many, single-direction relationships from each dimension's `*_key` to the matching foreign key in `FactClaim`. Relate `ModelScores[source_row_id]` to `FactClaim[claim_key]` as one-to-one (or many-to-one from scores) when Power BI accepts it. Use `FactClaim[claim_key]` as the row grain; it is a reproducible ETL surrogate for this file order, not an original business claim ID.
 
