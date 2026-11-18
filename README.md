@@ -128,6 +128,9 @@ The included local run selected the random forest (five-fold training Average Pr
 At this threshold, 669 of 3,084 holdout records (21.7%) would enter the example review queue. Precision is low: most queued records did not carry the dataset's positive label. This illustrates why threshold selection must account for review capacity and false-positive cost. These are results from one random split of a small historical benchmark, not estimates of performance at a current insurer.
 
 ## SQL and Power BI
+### Power BI report preview
+
+![Claims overview with recorded-label metrics, claim-volume charts, and filters](docs/powerbi-overview.png)
 
 `sql/schema.sql` creates `DimIncident`, `DimPolicy`, `DimVehicle`, `DimClaimant`, and `FactClaim`. `sql/analytics.sql` contains reusable workload, label-rate, segment, and data-quality queries. `scripts/build_warehouse.py` exports each modeled table as CSV for Power BI and stores the full local database in DuckDB. Training also exports a small-cell-aware descriptive test-split audit by excluded demographic groups; it is not a fairness certification.
 
