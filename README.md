@@ -132,6 +132,8 @@ At this threshold, 669 of 3,084 holdout records (21.7%) would enter the example 
 
 ![Claims overview with recorded-label metrics, claim-volume charts, and filters](docs/powerbi-overview.png)
 
+![Model review with performance metrics, precision-recall and calibration charts, and review-queue summary](docs/powerbi-model-review.png)
+
 `sql/schema.sql` creates `DimIncident`, `DimPolicy`, `DimVehicle`, `DimClaimant`, and `FactClaim`. `sql/analytics.sql` contains reusable workload, label-rate, segment, and data-quality queries. `scripts/build_warehouse.py` exports each modeled table as CSV for Power BI and stores the full local database in DuckDB. Training also exports a small-cell-aware descriptive test-split audit by excluded demographic groups; it is not a fairness certification.
 
 Power BI does not require a `.pbix` to be delivered with this source project. Build instructions, page layout, slicers, labeling guidance, and ready-to-paste DAX are in [`powerbi/dashboard_spec.md`](powerbi/dashboard_spec.md) and [`powerbi/measures.dax`](powerbi/measures.dax). Keep the source-label rate and holdout model performance visually distinct. Do not present recorded-positive segments as causal fraud drivers.
