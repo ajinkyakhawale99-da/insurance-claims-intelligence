@@ -3,7 +3,9 @@
 An end-to-end portfolio project for insurance claims analytics and data-science interviews. It combines a documented public dataset, a DuckDB star schema and analytical SQL, reproducible Python cleaning and EDA, a leakage-aware imbalanced-classification workflow, Power BI specifications, and a Streamlit scoring demo.
 
 **Scope:** the model estimates the probability of the dataset's recorded positive label. It does not determine that a real claim is fraudulent, and it is not suitable for claim denial, payment decisions, or production use. Scores are for a human-review demonstration only.
+## Streamlit demo
 
+![Example output: a 10.6% estimated probability of the dataset's recorded positive label, above the 8.2% advisory review threshold](docs/streamlit-demo.png)
 ## Project architecture
 
 ```mermaid
