@@ -1,4 +1,5 @@
 # Insurance Claims Intelligence & Fraud Risk Prediction
+[![Tests](https://github.com/ajinkyakhawale99-da/insurance-claims-intelligence/actions/workflows/tests.yml/badge.svg?branch=main)](https://github.com/ajinkyakhawale99-da/insurance-claims-intelligence/actions/workflows/tests.yml)
 
 An end-to-end portfolio project for insurance claims analytics and data-science interviews. It combines a documented public dataset, a DuckDB star schema and analytical SQL, reproducible Python cleaning and EDA, a leakage-aware imbalanced-classification workflow, Power BI specifications, and a Streamlit scoring demo.
 
