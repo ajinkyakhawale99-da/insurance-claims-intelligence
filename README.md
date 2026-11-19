@@ -141,7 +141,7 @@ Power BI does not require a `.pbix` to be delivered with this source project. Bu
 
 ## Interview-ready resume bullets
 
-Use only after running the pipeline, and replace bracketed values with the generated holdout results:
+Use these bullets only after running the pipeline and confirming the generated holdout results:
 
 - Built a reproducible insurance-claims analytics workflow in Python, DuckDB, and Power BI, including data-quality checks, a dimensional claims model, and segment-level analysis of a public vehicle-insurance benchmark.
 - Developed leakage-aware, class-weighted scikit-learn pipelines with cross-validated model selection, sigmoid calibration, and validation-based threshold selection; reported holdout precision, recall, Average Precision, PR-AUC, and Brier score against the dataset's recorded label.
