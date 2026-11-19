@@ -8,7 +8,7 @@
 - Reported shape: approximately 15,420 claims and 33 source fields; published copies report about 923 positive rows and vary by one row in total counts.
 - Label: source copies may call the binary target `FraudFound` or `FraudFound_P`. In this project the standardized name is `fraud_found_p`.
 - Provenance trail: a systematic review cites the Kaggle `Carclaims.csv` file as an Angoss Knowledge Seeker dataset; related research identifies a similarly sized “Vehicle Insurance” source as Oracle-origin. The exact chain of custody from that Oracle-origin record to this Kaggle file is not documented. The original collection and adjudication documents are not part of the downloadable Kaggle page.
-- License: check the current Kaggle page/uploader terms before use or redistribution. The project stores only the source URL and does not bundle the source data.
+- Data reuse terms: this project has not independently verified redistribution rights for the Kaggle copy or the underlying Angoss-origin data. A Kaggle page citation alone is not proof of redistribution rights. The repository does not include the source data. The root MIT license applies to this project's code only, not to the dataset; verify the uploader or rights-holder terms before redistributing data.
 
 ## Why this dataset
 
